@@ -13,6 +13,7 @@ import { HeroComponent } from './shared/hero/hero.component';
 import { FeatureComponent } from './shared/feature/feature.component';
 import { ContentComponent } from './shared/content/content.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [Meta],
