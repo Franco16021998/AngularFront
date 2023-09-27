@@ -166,10 +166,17 @@ Add routerLink and edit section names:
 ```
 
 ## Prepare build
+```
 $ ng add @nguniversal/express-engine
 $ npm run prerender
+```
 
 ## Deploy to AWS Amplify (without git provider)
 
 ## Deploy to AWS Amplify (with git provider)
 - Webhook
+
+## Environments
+```
+$ ng generate environments
+```
