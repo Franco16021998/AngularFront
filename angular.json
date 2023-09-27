@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "static-web-ng": {
+    "dynamic-web-ng": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/static-web-ng/browser",
+            "outputPath": "dist/dynamic-web-ng/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "static-web-ng:build:production"
+              "browserTarget": "dynamic-web-ng:build:production"
             },
             "development": {
-              "browserTarget": "static-web-ng:build:development"
+              "browserTarget": "dynamic-web-ng:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "static-web-ng:build"
+            "browserTarget": "dynamic-web-ng:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/static-web-ng/server",
+            "outputPath": "dist/dynamic-web-ng/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -117,12 +117,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "static-web-ng:build:development",
-              "serverTarget": "static-web-ng:server:development"
+              "browserTarget": "dynamic-web-ng:build:development",
+              "serverTarget": "dynamic-web-ng:server:development"
             },
             "production": {
-              "browserTarget": "static-web-ng:build:production",
-              "serverTarget": "static-web-ng:server:production"
+              "browserTarget": "dynamic-web-ng:build:production",
+              "serverTarget": "dynamic-web-ng:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -136,12 +136,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "static-web-ng:build:production",
-              "serverTarget": "static-web-ng:server:production"
+              "browserTarget": "dynamic-web-ng:build:production",
+              "serverTarget": "dynamic-web-ng:server:production"
             },
             "development": {
-              "browserTarget": "static-web-ng:build:development",
-              "serverTarget": "static-web-ng:server:development"
+              "browserTarget": "dynamic-web-ng:build:development",
+              "serverTarget": "dynamic-web-ng:server:development"
             }
           },
           "defaultConfiguration": "production"

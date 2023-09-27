@@ -1,5 +1,5 @@
 {
-  "name": "static-web-ng",
+  "name": "dynamic-web-ng",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run static-web-ng:serve-ssr",
-    "serve:ssr": "node dist/static-web-ng/server/main.js",
-    "build:ssr": "ng build && ng run static-web-ng:server",
-    "prerender": "ng run static-web-ng:prerender"
+    "dev:ssr": "ng run dynamic-web-ng:serve-ssr",
+    "serve:ssr": "node dist/dynamic-web-ng/server/main.js",
+    "build:ssr": "ng build && ng run dynamic-web-ng:server",
+    "prerender": "ng run dynamic-web-ng:prerender"
   },
   "private": true,
   "dependencies": {
