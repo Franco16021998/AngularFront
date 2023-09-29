@@ -180,3 +180,17 @@ $ npm run prerender
 ```
 $ ng generate environments
 ```
+
+
+## Amplify
+- Within App Settings, go to Rewrites and redirects, Click on "Open text editor" and copy-paste the following:
+```
+[
+    {
+        "source": "</^[^.]+$|\\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>",
+        "target": "/index.html",
+        "status": "200",
+        "condition": null
+    }
+]
+```
