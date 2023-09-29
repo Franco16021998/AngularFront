@@ -8,14 +8,20 @@ import { environment } from "src/environments/environment";
   providedIn: 'root'
 })
 export class ProductService {
-  private productUrl = environment.apiUrl + '/products';
+  private productsEndpoint = environment.apiUrl + '/products';
 
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productUrl)
+    return this.http.get<Product[]>(this.productsEndpoint)
       .pipe(
-        //tap(data => console.log('All: ', JSON.stringify(data))),
+        catchError(this.handleError)
+      );
+  }
+
+  getProductByName(name: string): Observable<Product> {
+    return this.http.get<Product>(`${this.productsEndpoint}/${name}`)
+      .pipe(
         catchError(this.handleError)
       );
   }

@@ -14,12 +14,13 @@ import { FeatureComponent } from './shared/feature/feature.component';
 import { ContentComponent } from './shared/content/content.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
+import { Replace } from './shared/replace.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CatalogComponent,
     BlogComponent,
     TestimonialsComponent,
     AboutComponent,
@@ -28,12 +29,15 @@ import { HttpClientModule } from '@angular/common/http';
     HeroComponent,
     FeatureComponent,
     ContentComponent,
-    NotFoundComponent
+    CatalogComponent,
+    NotFoundComponent,
+    ProductComponent,
+    Replace
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),
