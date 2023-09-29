@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'http://localhost:8080'
+  apiUrl: 'https://myc2tkzk6p.us-east-2.awsapprunner.com'
 };
